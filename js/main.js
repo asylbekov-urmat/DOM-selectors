@@ -7,10 +7,10 @@
 // класс .selected
 //4 — Найдите все гиперссылки и удалите у них подчеркивания
 
-// 5— Переключите элементы strong с классом some в состояние без этого класса, а
+// 6— Переключите элементы strong с классом some в состояние без этого класса, а
 // тем элементам (strong), у которых небыло этого класса — добавьте.
-//6 — среди набора элементов с классом .row удалите класс у второго элемента
-//7 — прочитайте CSS-свойство color у второй гиперсылки в тексте
+//7 — среди набора элементов с классом .row удалите класс у второго элемента
+//8 — прочитайте CSS-свойство color у второй гиперсылки в тексте
 
 //1
 let strong = document.getElementsByTagName('strong');
@@ -31,9 +31,7 @@ for(let i = 0; i < mark.length; i++){
 //4
 let a = document.getElementsByTagName('a');
 for(let i = 0; i < a.length; i++){
-    a[i].classList.add('a');
     a[i].style.textDecoration = 'none';
-    a[i].classList.toggle('a');
 }
 //5
 //No
@@ -44,10 +42,13 @@ for(let i = 0; i < strong.length; i++){
 //7
 let row = document.getElementsByClassName('row');
 for(let i = 0; i < row.length; i++){
-    row[1].classList.toggle('row')
-   
+    row[1].classList.toggle('row')  
 }
 //8
+let eigth = document.getElementsByTagName('a');
+let aName = window.getComputedStyle(eigth[1]);
+console.log(aName.color);
+
 
 
 
