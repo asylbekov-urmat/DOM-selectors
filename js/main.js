@@ -13,7 +13,7 @@
 //8 — прочитайте CSS-свойство color у второй гиперсылки в тексте
 
 //1
-let strong = document.getElementsByTagName('strong');
+let strong = document.querySelectorAll('strong');
 for(let i = 0; i < strong.length; i++){
     strong[i].style.color = 'green';
     strong[i].style.background = 'red';
@@ -40,7 +40,7 @@ for(let i = 0; i < strong.length; i++){
     strong[i].classList.toggle('some')
 }
 //7
-let row = document.getElementsByClassName('row');
+let row = document.getElementsByClassName('.row');
 for(let i = 0; i < row.length; i++){
     row[1].classList.toggle('row')  
 }
