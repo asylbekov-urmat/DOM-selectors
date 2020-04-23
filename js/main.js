@@ -34,7 +34,10 @@ for(let i = 0; i < a.length; i++){
     a[i].style.textDecoration = 'none';
 }
 //5
-//No
+let regexp = /Задание/gi;
+let containerClass = document.querySelector("container").innerText;
+const result = Array.from(containerClass.matchAll(regexp));
+console.log(containerClass);
 //6
 for(let i = 0; i < strong.length; i++){
     strong[i].classList.toggle('some')
